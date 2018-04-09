@@ -1,0 +1,1 @@
+java -cp ./extLib/*;./bin org.testng.TestNG test.xml

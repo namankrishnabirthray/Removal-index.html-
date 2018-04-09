@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="763346" started-at="2018-04-09T18:58:10Z" finished-at="2018-04-09T19:10:54Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="763346" started-at="2018-04-09T18:58:10Z" finished-at="2018-04-09T19:10:54Z">
+      <class name="testCases.TestCaseName">
+        <test-method status="PASS" signature="preRequisite()[pri:0, instance:testCases.TestCaseName@31ef45e3]" name="preRequisite" is-config="true" duration-ms="453" started-at="2018-04-10T00:28:10Z" finished-at="2018-04-10T00:28:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preRequisite -->
+        <test-method status="PASS" signature="TC_ID(java.lang.String)[pri:0, instance:testCases.TestCaseName@31ef45e3]" name="TC_ID" duration-ms="760500" started-at="2018-04-10T00:28:11Z" data-provider="URLs" finished-at="2018-04-10T00:40:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www-stage.oracle.com/storage/nas/storage-appliance-encryption/index.html]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_ID -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:testCases.TestCaseName@31ef45e3]" name="setup" is-config="true" duration-ms="0" started-at="2018-04-10T00:28:11Z" finished-at="2018-04-10T00:28:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="updateResults()[pri:0, instance:testCases.TestCaseName@31ef45e3]" name="updateResults" is-config="true" duration-ms="2295" started-at="2018-04-10T00:40:51Z" finished-at="2018-04-10T00:40:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateResults -->
+        <test-method status="PASS" signature="tear()[pri:0, instance:testCases.TestCaseName@31ef45e3]" name="tear" is-config="true" duration-ms="8478" started-at="2018-04-10T00:40:54Z" finished-at="2018-04-10T00:41:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear -->
+      </class> <!-- testCases.TestCaseName -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
