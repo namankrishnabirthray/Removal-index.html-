@@ -29,6 +29,7 @@ public class ExtentManager
 		 Path = "./Report/WebTech_Automation_Report"+Utility.GetCurrentTimeStamp().replace(":","_").replace(".","_")+".html";
 		 extent=new ExtentReports();
 		 htmlReporter.config().setDocumentTitle("Oracle|WebTech");	 
+		 extent.setSystemInfo("Host","Aarti Ekbote");
 	     extent.setSystemInfo("Author","Naman Krishna Birthray");
 	     htmlReporter.config().setReportName("Removal-index.html ");
 	     extent.attachReporter(htmlReporter);

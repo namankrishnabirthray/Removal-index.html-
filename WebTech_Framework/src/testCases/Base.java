@@ -57,6 +57,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 
 import libraries.ExtentManager;
 import libraries.Utility;
+import net.bytebuddy.description.modifier.SynchronizationState;
 
 
 public class Base 
@@ -157,8 +158,6 @@ public class Base
 	    
         logger.log(Status.INFO, MarkupHelper.createLabel("Page URL navigation result listed below", ExtentColor.GREY));
         
-        
-        
         links= new String[linksCount];
         int start=(headerSize+ breadCrumbSize);  
         int end= ( linksCount-1-footerSize);
@@ -173,6 +172,10 @@ public class Base
         logger.log(Status.INFO, MarkupHelper.createTable(data4));
         
         
+        
+        
+         boolean navigation=true;
+        
         for(int i=headerSize;i<linksCount-1-footerSize;i++)
          {
          links[i] = linksize.get(i).getAttribute("href");
@@ -182,16 +185,21 @@ public class Base
          
         
          for(int i=headerSize;i<linksCount-1-footerSize;i++) { 
-          
+                 navigation=true;
         	 
         	 if(links[i]==null){
         		 nullLinks++;
+        		 
+        	    navigation=false;
         	                   }
     
-       
-        	 
-        	 
-        else {   
+        	
+        	 else if(links[i].contains("twitter")|links[i].contains("facebook")|links[i].contains("plus.google.com")|links[i].contains("go.oracle.com")|links[i].contains("youtube")|links[i].contains("linkedin")) {
+        		 navigation=false;
+        	 }
+        	
+               else if(navigation==true) {  
+        	  
                  
         		 try{
                      driver.navigate().to(links[i]); 
